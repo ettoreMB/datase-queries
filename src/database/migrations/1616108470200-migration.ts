@@ -25,6 +25,7 @@ export class migration1616108470200 implements MigrationInterface {
     await queryRunner.query(
       'ALTER TABLE "users_games_games" ADD CONSTRAINT "FK_934b0d8f9d0084c97d3876ad32d" FOREIGN KEY ("gamesId") REFERENCES "games"("id") ON DELETE CASCADE ON UPDATE NO ACTION',
     );
+ 
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {

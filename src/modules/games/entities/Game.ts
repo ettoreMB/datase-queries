@@ -17,6 +17,9 @@ export class Game {
   @Column()
   title: string;
 
+  @Column()
+  genre: string;
+
   @ManyToMany(() => User, (user) => user.games)
   users: User[];
 
